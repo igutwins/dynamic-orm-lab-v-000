@@ -3,6 +3,9 @@ require 'active_support/inflector'
 require 'interactive_record.rb'
 
 class Student < InteractiveRecord
-  attr_accessor
+  attr_accessor :attribute
 
+  def initialize(attribute)
+    @attribute = attribute
+  end
 end
