@@ -29,7 +29,7 @@ class InteractiveRecord
   end
 
   def col_names_for_insert
-    self.class.column_names each do |col_name|
+    self.class.column_names.each do |col_name|
       values << "'#{send(col_name)}'" unless send(col_name).nil?
     end
     values.join(", ")
